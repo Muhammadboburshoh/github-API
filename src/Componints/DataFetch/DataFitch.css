@@ -1,0 +1,31 @@
+.users {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user {
+  border: 3px solid rgba(104, 136, 158, 0.925);
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  background-color: #123;
+}
+
+.user-link {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.user-img {
+  border-radius: 50%;
+}

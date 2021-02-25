@@ -1,45 +1,63 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
-function DataFetch () {
+import "./DataFitch.css"
+function DataFetch() {
 
-  const userslogin = [
-    "muhammadboburshoh", "omon490",
-  ] 
-  
+  const usersLogin = [
+    "muhammadboburshoh", "omon490", "abduqodirov", "anvarnarz", "mannonov", "muhammadyunusuz", "abdulatifkhan"
+  ]
+
   const [data, setData] = useState({
     loading: true,
-    error: null, 
+    error: null,
     users: []
   })
 
 
 
   useEffect(() => {
+    let allUsers = []
 
-    userslogin.forEach(userLogin => {
+    usersLogin.forEach((userLogin, index) => {
 
       fetch(`https://api.github.com/users/${userLogin}`)
-      .then(res => res.json())
-      .then(user => {
+        .then(res => res.json())
+        .then(user => {
 
-        console.log(user);
-        setData({ loading: false, users: [...data.users, user]})
-      })
-      .catch(error => {
-        setData({error: "APIda xatolik bor."})
-      })
+          allUsers.push(user)
+          if (index === usersLogin.length - 1) {
+            setData({ loading: false, users: allUsers})
+          }
+        })
+        .catch(error => {
+          setData({ error: "APIda xatolik bor." })
+        })
 
     })
 
   }, [])
 
-  // console.log(data.users);
+
+  console.log(data.users);
 
   return (
     <>
-      <ul>
+      <ul className="users">
+        {data.loading && <mark>Loading...</mark>}
+        {data.error && <>{data.error}</>}
         {
-          
+          !data.loading && data.users.map(user => {
+            
+            return(
+              <li key={user.id} className="user">
+                <Link to={user.login} className="user-link">
+                  <img src={user.avatar_url} width="200" height="200" alt={user.login} className="user-img"/>
+                  <p className="user-name">{user.name}</p>
+                </Link>
+              </li>
+            )
+          })
         }
       </ul>
     </>
