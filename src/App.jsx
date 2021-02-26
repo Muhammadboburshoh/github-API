@@ -1,13 +1,17 @@
 import './App.css'
-import DataFetch from "./Componints/DataFetch/DataFetch"
+import Home from "./Componints/Pages/Home/Home"
+import { useUser } from "./Componints/Context/UserContext"
+
 
 function App() {
 
+  const [ userA ] = useUser()
+  console.log(userA);
+
   return (
-    <div className="continer">
-      <h1 className="site-heading">GitHub Users!</h1>
-      <DataFetch />
-    </div>
+    <>
+      <Home />
+    </>
   )
 }
 

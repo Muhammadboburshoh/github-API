@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
+import { useUser } from "../Context/UserContext"
+
 import "./DataFetch.css"
 function DataFetch() {
+
+  const [ userA, setUserA ] = useUser()
 
   const usersLogin = [
     "anvarnarz", "Muhammadjewel", "muhammad-najimov", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "jakhongirs", "bdevpro", 
@@ -13,8 +17,6 @@ function DataFetch() {
     error: null,
     users: []
   })
-
-
 
   useEffect(() => {
     let allUsers = []
@@ -51,7 +53,11 @@ function DataFetch() {
             
             return(
               <li key={user.id} className="user">
-                <Link to={user.login} className="user-link">
+                <Link
+                  onClick={e => setUserA(user)}
+                 to={user.login}
+                 className="user-link"
+                 >
                   <img src={user.avatar_url} width="200" height="200" alt={user.login} className="user-img"/>
                   <p className="user-name">{user.name}</p>
                 </Link>
