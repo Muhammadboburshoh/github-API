@@ -8,14 +8,14 @@
 }
 
 .user {
-  border: 3px solid rgba(104, 136, 158, 0.925);
+  border: 3px solid rgba(70, 84, 94, 0.925);
   margin: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-weight: bold;
-  background-color: #123;
+  background-color: rgb(47, 94, 94);
 }
 
 .user-link {

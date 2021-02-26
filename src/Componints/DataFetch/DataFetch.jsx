@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-import "./DataFitch.css"
+import "./DataFetch.css"
 function DataFetch() {
 
   const usersLogin = [
-    "muhammadboburshoh", "omon490", "abduqodirov", "anvarnarz", "mannonov", "muhammadyunusuz", "abdulatifkhan"
+    "anvarnarz", "Muhammadjewel", "muhammad-najimov", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "jakhongirs", "bdevpro", 
   ]
 
   const [data, setData] = useState({
