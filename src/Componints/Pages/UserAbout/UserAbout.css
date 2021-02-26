@@ -26,3 +26,21 @@
 .user__name {
   text-align: center;
 }
+
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #ccc;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(43, 76, 109);
+  font-weight: bold;
+}
+
+.back-link:hover {
+  background-color: #fff;
+  color: rgb(43, 76, 109)
+}

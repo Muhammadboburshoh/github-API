@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useUser } from "../../Context/UserContext"
 import "./UserAbout.css"
 
@@ -14,9 +15,16 @@ function UserAbout () {
           {
             userA.bio && <p><b> User about: </b>{userA.bio}</p>
           }
+
           {
             userA.location && <p><b>Yashash joyi: </b>{userA.location}</p>
           }
+
+          {
+            userA.company && <p><b>Ishlash joyi: </b>{userA.company}</p>
+          }
+
+          <Link className="back-link" to="/">Back</Link>
         </div>
       </div>
     </>

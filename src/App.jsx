@@ -8,7 +8,6 @@ import { useUser } from "./Componints/Context/UserContext"
 function App() {
 
   const [ userA ] = useUser()
-  console.log(userA);
 
   return (
     <>

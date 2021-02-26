@@ -6,11 +6,7 @@ import { useUser } from "../Context/UserContext"
 import "./DataFetch.css"
 function DataFetch() {
 
-  const [ userA, setUserA ] = useUser()
-
-  const usersLogin = [
-    "anvarnarz", "Muhammadjewel", "muhammad-najimov", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "jakhongirs", "bdevpro", "sanjar1311",
-  ]
+  const  setUserA   = useUser()[1]
 
   const [data, setData] = useState({
     loading: true,
@@ -19,6 +15,11 @@ function DataFetch() {
   })
 
   useEffect(() => {
+
+    const usersLogin = [
+      "anvarnarz", "Muhammadjewel", "bdevpro", "jakhongirs", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "mrshuhrat", "abdulatifkhan", "akbarjondev",
+    ]
+    
     let allUsers = []
 
     usersLogin.forEach((userLogin, index) => {
@@ -41,7 +42,7 @@ function DataFetch() {
   }, [])
 
 
-  console.log(data.users);
+  // console.log(data.users);
 
   return (
     <>
