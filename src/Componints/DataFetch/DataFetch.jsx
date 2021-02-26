@@ -9,7 +9,7 @@ function DataFetch() {
   const [ userA, setUserA ] = useUser()
 
   const usersLogin = [
-    "anvarnarz", "Muhammadjewel", "muhammad-najimov", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "jakhongirs", "bdevpro", 
+    "anvarnarz", "Muhammadjewel", "muhammad-najimov", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "jakhongirs", "bdevpro", "sanjar1311",
   ]
 
   const [data, setData] = useState({

@@ -1,0 +1,28 @@
+.user-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+.user-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.user__img {
+  border-radius: 15px;
+  border: 3px solid #fff;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.user__name {
+  text-align: center;
+}
