@@ -15,7 +15,7 @@ function DataFetch() {
   useEffect(() => {
 
     const usersLogin = [
-      "anvarnarz", "Muhammadjewel", "bdevpro", "jakhongirs", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "mrshuhrat", "abdulatifkhan", "akbarjondev",
+      "anvarnarz", "Muhammadjewel", "bdevpro", "jakhongirs", "SardorAbdurasulov", "omon490", "muhammadboburshoh", "mrshuhrat", "abdulatifkhan", "akbarjondev", "nizamoff",
     ]
     
     let allUsers = []
