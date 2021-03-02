@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-import { useUser } from "../Context/UserContext"
 
 import "./DataFetch.css"
 function DataFetch() {
 
-  const  setUserA   = useUser()[1]
 
   const [data, setData] = useState({
     loading: true,
@@ -41,9 +39,6 @@ function DataFetch() {
 
   }, [])
 
-
-  // console.log(data.users);
-
   return (
     <>
       <ul className="users">
@@ -55,7 +50,6 @@ function DataFetch() {
             return(
               <li key={user.id} className="user">
                 <Link
-                  onClick={e => setUserA(user)}
                  to={user.login}
                  className="user-link"
                  >
